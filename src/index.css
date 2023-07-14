@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: Fira Sans, system-ui, sans-serif;
+}
+
+body {
+  max-width: 464px;
+  margin: 0 auto !important;
+  float: none !important;
+  font-family: sans-serif;
+}
+
+#root {
+  background-color: #f3f4fb;
+}
