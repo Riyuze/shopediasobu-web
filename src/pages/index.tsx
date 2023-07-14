@@ -1,7 +1,7 @@
 const HomePage = () => {
     return (
         <>
-            Test
+            Whereas disregard and contempt for human rights have resulted
         </>
     )
 }

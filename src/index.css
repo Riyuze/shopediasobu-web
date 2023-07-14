@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 html {
-  font-family: Fira Sans, system-ui, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 body {
   max-width: 464px;
   margin: 0 auto !important;
   float: none !important;
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #root {
