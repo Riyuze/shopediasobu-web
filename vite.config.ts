@@ -8,6 +8,6 @@ export default defineConfig({
         port: 3000,
         https: true,
     },
-    base: "https://riyuze.github.io/shopediasobu-web/",
+    base: "/shopediasobu-web/",
     plugins: [basicSsl(), react()],
 });
