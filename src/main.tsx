@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
                 shouldRetryOnError: false,
             }}
         >
-            <BrowserRouter>
+            <BrowserRouter basename="/shopediasobu-web">
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     <Routes />
