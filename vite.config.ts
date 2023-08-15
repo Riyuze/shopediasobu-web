@@ -8,5 +8,6 @@ export default defineConfig({
         port: 3000,
         https: true,
     },
+    base: "/",
     plugins: [basicSsl(), react()],
 });
