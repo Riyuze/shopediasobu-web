@@ -38,7 +38,7 @@ function App() {
         {routes.map(({ path, component: Component = Fragment }) => (
           <Route
             key={path}
-            path={path}
+            path={`shopediasobu-web/${path}`}
             element={<Component />}
             lazy={() => import(`./pages${path}/index.tsx`)}
           />
