@@ -3,16 +3,24 @@
 @tailwind utilities;
 
 html {
-  font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
-  max-width: 464px;
-  margin: 0 auto !important;
-  float: none !important;
-  font-family: 'Roboto Condensed', sans-serif;
+    margin: 0 auto !important;
+    float: none !important;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 #root {
-  background-color: #f3f4fb;
+    background-color: #181818;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
