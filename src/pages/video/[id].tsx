@@ -10,7 +10,7 @@ import Comments from "../../component/Comments";
 const VideoPage = () => {
     const { id } = useParams();
 
-    const { data, isLoading, error } = getVideo(id || "");
+    const { data } = getVideo(id || "");
     
     const url = data?.url.split("=")[1]
 

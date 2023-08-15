@@ -2,7 +2,7 @@ import { getProducts } from "../services/product";
 import { ProductModel } from "../model/product";
 
 const Products = ({ id }: { id: string }) => {
-    const { data, isLoading, error } = getProducts(id || "");
+    const { data } = getProducts(id || "");
     return (
         <>
             {data &&

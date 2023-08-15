@@ -6,7 +6,7 @@ import { convertDateToString } from "../utils/time";
 import { useSWRConfig } from "swr";
 
 const Comments = ({ id }: { id: string }) => {
-    const { data, isLoading, error } = getComments(id || "");
+    const { data } = getComments(id || "");
     const [username, setUsername] = useState("");
     const [comment, setComment] = useState("");
     const [open, setOpen] = useState(false);
