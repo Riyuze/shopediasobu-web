@@ -15,7 +15,7 @@ import { VideoModel } from "../model/video";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-    const { data, isLoading, error } = getVideos();
+    const { data } = getVideos();
 
     const [showSearch, setShowSearch] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
