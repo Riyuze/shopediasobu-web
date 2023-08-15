@@ -1,4 +1,6 @@
 # Shopediasobu-web
+https://riyuze.github.io/shopediasobu-web/
+
 Web Platform for a live streaming & live shopping platform. Inspired by Tokopedia Play. Built using Typescript, ReactTS, MaterialUI, Axios, and SWR.
 
 ## Features
