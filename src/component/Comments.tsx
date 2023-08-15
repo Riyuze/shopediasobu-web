@@ -1,7 +1,7 @@
 import { getComments, addComment } from "../services/comment";
 import { CommentModel, CommentRequest } from "../model/comment";
 import { TextField, Button, Alert, Snackbar } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { convertDateToString } from "../utils/time";
 import { useSWRConfig } from "swr";
 
@@ -11,7 +11,9 @@ const Comments = ({ id }: { id: string }) => {
     const [comment, setComment] = useState("");
     const [open, setOpen] = useState(false);
 
-    const { mutate } = useSWRConfig()
+    const bottomRef = useRef<null | HTMLDivElement>(null);
+
+    const { mutate } = useSWRConfig();
 
     const handleSubmit = async () => {
         if (username.length === 0 || comment.length === 0) {
@@ -22,9 +24,13 @@ const Comments = ({ id }: { id: string }) => {
                 comment: comment,
             };
             await addComment(id, payload);
-            mutate(`/comment/${id}`)
+            mutate(`/comment/${id}`);
         }
     };
+
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [data]);
 
     return (
         <>
@@ -43,6 +49,7 @@ const Comments = ({ id }: { id: string }) => {
                             </div>
                         );
                     })}
+                <div ref={bottomRef} />
             </div>
             <div className="w-full mt-4 flex">
                 <div className="mr-2">
